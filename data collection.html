@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anonymous Messages</title>
+<link rel="stylesheet" href="style2.css">
+</head>
+<body>
+<div class="container">
+  <h1>Leave a Message ❤️</h1>
+  <p class="subtitle">Send a kind note or an anonymous message to someone special.</p>
+
+  <!-- User Form -->
+  <form id="data-form" class="form-box">
+    <input type="text" id="name" placeholder="Your Name (optional)">
+    <textarea id="message" placeholder="Write your message here..." required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p id="thankyou">Thank you! Your message has been sent ❤️</p>
+
+  <!-- Admin Login -->
+  <div class="admin-login">
+    <h2>Admin Login</h2>
+    <input type="password" id="admin-pass" placeholder="Enter admin password">
+    <button id="admin-login-btn">Login as Admin</button>
+  </div>
+
+  <!-- Admin Panel -->
+  <div id="admin-panel" class="admin-panel">
+    <h2>All Messages (Admin Only)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Message</th>
+        </tr>
+      </thead>
+      <tbody id="submissions-list"></tbody>
+    </table>
+  </div>
+</div>
+
+<script src="2.js"></script>
+</body>
+</html>

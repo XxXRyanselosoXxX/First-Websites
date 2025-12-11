@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url('heh1.jpg') no-repeat center center fixed; /* Change image here */
+    background-size: cover;
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s ease;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    background: rgba(245, 245, 245, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    gap: 40px;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Slight animation */
+}
+
+/* Left Profile Section */
+header {
+    flex: 1;
+    text-align: left;
+}
+
+.profile-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile-photo img:hover {
+    transform: scale(1.05);
+}
+
+/* Profile Text */
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+header p {
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Right Section */
+.right-section {
+    flex: 2;
+}
+
+/* Contacts Buttons */
+.contacts {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.contact-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.fb { background: #1877f2; } /* Facebook blue */
+.fb:hover { opacity: 0.85; transform: translateY(-3px); }
+
+.tiktok { background: #000; } /* TikTok black */
+.tiktok:hover { opacity: 0.85; transform: translateY(-3px); }
+
+.gmail { background: #dd4b39; } /* Gmail red */
+.gmail:hover { opacity: 0.85; transform: translateY(-3px); }
+
+/* Projects Section */
+.projects h2 {
+    color: #222;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.projects ul {
+    display: flex;        /* Use flexbox */
+    gap: 20px;            /* Space between items */
+    list-style: none;     /* Remove bullets */
+    padding: 0;
+    flex-wrap: nowrap;    /* Prevent wrapping to the next line */
+    overflow-x: auto;     /* Allow horizontal scroll if too many items */
+}
+
+.project-link {
+    display: inline-flex;
+    width: 200px;
+    height: 120px;
+    background: rgba(31,31,31,0.9);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: all 0.3s;
+    box-shadow: 0 0 5px #1900ff;
+    text-align: center;
+    padding: 10px;
+    flex-shrink: 0;       /* Prevent shrinking */
+}
+
+.project-link:hover {
+    background: #1877f2; /* Slight color change */
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+/* Footer inside box */
+footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}

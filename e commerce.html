@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carl's Shop</title>
+<link rel="stylesheet" href="style3.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Carl's Online Shop</h1>
+    <div class="cart">
+      <button id="cart-btn">Cart (<span id="cart-count">0</span>)</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Products -->
+    <section class="products">
+      <h2>Products</h2>
+      <div id="product-list" class="product-list"></div>
+    </section>
+
+    <!-- Cart -->
+    <section class="cart-display" id="cart-display">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: $<span id="total">0</span></p>
+      <button id="checkout-btn">Checkout</button>
+      <button id="clear-cart">Clear Cart</button>
+    </section>
+
+    <!-- Checkout -->
+    <section class="checkout" id="checkout-section" style="display:none;">
+      <h2>Checkout</h2>
+      <form id="checkout-form">
+        <input type="text" id="customer-name" placeholder="Full Name" required>
+        <input type="email" id="customer-email" placeholder="Email Address" required>
+        <input type="text" id="customer-address" placeholder="Shipping Address" required>
+
+        <h3>Payment Method</h3>
+        <select id="payment-method" required>
+          <option value="">Select Payment</option>
+          <option value="gcash">GCash</option>
+        </select>
+
+        <div id="gcash-payment" style="text-align:center; margin-top:20px; display:none;">
+          <p>Scan the QR code below or pay via GCash:</p>
+          <img src="gcash-qr.png" alt="GCash QR" style="width:200px;height:200px;border:1px solid #ccc;border-radius:10px;">
+        </div>
+
+        <button type="submit">Pay Now</button>
+      </form>
+    </section>
+
+    <!-- Admin Table -->
+    <section id="orders-display" style="display:none;">
+      <h2>All Orders (Admin Only)</h2>
+      <table border="1" style="width:100%; border-collapse: collapse;">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Items</th>
+            <th>Total</th>
+            <th>Payment Method</th>
+          </tr>
+        </thead>
+        <tbody id="orders-list"></tbody>
+      </table>
+    </section>
+
+    <!-- Admin Login -->
+    <button id="admin-btn">Admin Login</button>
+  </main>
+</div>
+
+<script src="3.js"></script>
+</body>
+</html>

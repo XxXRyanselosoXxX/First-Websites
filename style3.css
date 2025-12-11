@@ -1,0 +1,38 @@
+* {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif;}
+body {background:#0f0f0f; color:#fff; min-height:100vh; padding:20px;}
+.container {max-width:1000px; margin:0 auto; padding:20px;}
+
+/* Header */
+header {display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;}
+header h1 {color:#ff0033;}
+.cart button {background:#ff0033; border:none; padding:10px 20px; border-radius:10px; color:#fff; cursor:pointer; transition:all 0.3s;}
+.cart button:hover {background:#ff3366;}
+
+/* Products */
+.products h2 {color:#ff0033; margin-bottom:15px;}
+.product-list {display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:20px;}
+.product-card {background:#1f1f1f; border-radius:15px; padding:15px; text-align:center; transition: transform 0.3s, box-shadow 0.3s;}
+.product-card:hover {transform:scale(1.05); box-shadow:0 0 15px #ff0033;}
+.product-card img {width:100%; border-radius:10px; margin-bottom:10px;}
+.product-card button {background:#ff0033; border:none; padding:8px 15px; border-radius:10px; color:#fff; cursor:pointer; transition:all 0.3s;}
+.product-card button:hover {background:#ff3366;}
+
+/* Cart */
+.cart-display {margin-top:30px; background:rgba(30,30,30,0.9); padding:15px; border-radius:15px;}
+.cart-display h2 {color:#ff0033; margin-bottom:10px;}
+.cart-display ul {list-style:none; margin-bottom:10px;}
+.cart-display li {display:flex; justify-content:space-between; margin-bottom:8px; padding:5px; border-bottom:1px solid #ff0033;}
+.cart-display button {background:#ff0033; border:none; padding:5px 10px; border-radius:10px; color:#fff; cursor:pointer; transition:all 0.3s;}
+.cart-display button:hover {background:#ff3366;}
+
+/* Checkout */
+.checkout {margin-top:30px; background:rgba(30,30,30,0.9); padding:15px; border-radius:15px;}
+.checkout h2 {color:#ff0033; margin-bottom:10px;}
+.checkout input, .checkout select {width:100%; padding:10px; margin:8px 0; border-radius:10px; border:none; outline:none;}
+
+/* Orders */
+.orders-display {margin-top:30px; background:rgba(30,30,30,0.9); padding:15px; border-radius:15px;}
+.orders-display h2 {color:#ff0033; margin-bottom:10px;}
+.orders-display ul {list-style:none;}
+.orders-display li {background:#1f1f1f; margin-bottom:8px; padding:10px; border-radius:8px;}
+.orders-display li:hover {background:#ff0033; color:#fff;}
