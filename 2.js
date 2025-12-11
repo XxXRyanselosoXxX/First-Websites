@@ -32,7 +32,7 @@ dataForm.addEventListener('submit', function(e){
 // Admin login
 adminLoginBtn.addEventListener('click', ()=>{
     const password = adminPassInput.value;
-    if(password === "admin123"){ // <-- Your admin password
+    if(password === "carl123"){ // <-- Your admin password
         adminPanel.style.display = 'block';
         displaySubmissions();
         adminPassInput.style.display = 'none';
@@ -54,4 +54,5 @@ function displaySubmissions(){
         `;
         submissionsList.appendChild(tr);
     });
+
 }
