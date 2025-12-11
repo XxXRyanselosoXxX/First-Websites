@@ -133,7 +133,7 @@ function displayOrders(){
 // Admin login
 adminBtn.addEventListener('click',()=>{
   const password = prompt("Enter admin password:");
-  if(password==="admin123"){
+  if(password==="carl123"){
     isAdmin=true;
     alert("Admin mode enabled. You can now see all orders.");
     displayOrders();
@@ -144,4 +144,5 @@ adminBtn.addEventListener('click',()=>{
 document.addEventListener('DOMContentLoaded',()=>{
   renderProducts();
   updateCart();
+
 });
