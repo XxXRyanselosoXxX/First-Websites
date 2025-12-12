@@ -6,7 +6,7 @@
 }
 
 body {
-    background: url('heh1.jpg') no-repeat center center fixed; /* Change image here */
+    background: url('heh1.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
     min-height: 100vh;
@@ -14,10 +14,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background 0.5s ease;
 }
 
-/* Container */
+/* ------------------ CONTAINER ------------------ */
 .container {
     width: 90%;
     max-width: 1000px;
@@ -26,17 +25,18 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     display: flex;
+    flex-wrap: wrap;              /* Allows wrapping on small screens */
     gap: 40px;
     transition: transform 0.3s ease;
 }
 
 .container:hover {
-    transform: translateY(-5px); /* Slight animation */
+    transform: translateY(-5px);
 }
 
-/* Left Profile Section */
+/* ------------------ LEFT PROFILE ------------------ */
 header {
-    flex: 1;
+    flex: 1 1 280px;             /* Flexible + responsive width */
     text-align: left;
 }
 
@@ -53,7 +53,6 @@ header {
     transform: scale(1.05);
 }
 
-/* Profile Text */
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -66,37 +65,40 @@ header p {
     margin-bottom: 30px;
 }
 
-/* Right Section */
+/* ------------------ RIGHT SECTION ------------------ */
 .right-section {
-    flex: 2;
+    flex: 2 1 400px;             /* Flexible + responsive width */
 }
 
-/* Contacts Buttons */
+/* ------------------ CONTACT BUTTONS ------------------ */
 .contacts {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;             /* Prevent breaking */
     margin-bottom: 30px;
 }
 
 .contact-btn {
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 10px;
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     transition: all 0.3s ease;
+    text-align: center;
+    flex: 1 1 140px;             /* Auto-resizes on phone */
 }
 
-.fb { background: #1877f2; } /* Facebook blue */
-.fb:hover { opacity: 0.85; transform: translateY(-3px); }
+.fb { background: #1877f2; }
+.tiktok { background: #000; }
+.gmail { background: #dd4b39; }
 
-.tiktok { background: #000; } /* TikTok black */
-.tiktok:hover { opacity: 0.85; transform: translateY(-3px); }
+.contact-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-3px);
+}
 
-.gmail { background: #dd4b39; } /* Gmail red */
-.gmail:hover { opacity: 0.85; transform: translateY(-3px); }
-
-/* Projects Section */
+/* ------------------ PROJECTS SECTION ------------------ */
 .projects h2 {
     color: #222;
     margin-bottom: 15px;
@@ -104,12 +106,12 @@ header p {
 }
 
 .projects ul {
-    display: flex;        /* Use flexbox */
-    gap: 20px;            /* Space between items */
-    list-style: none;     /* Remove bullets */
+    display: flex;
+    gap: 20px;
+    list-style: none;
     padding: 0;
-    flex-wrap: nowrap;    /* Prevent wrapping to the next line */
-    overflow-x: auto;     /* Allow horizontal scroll if too many items */
+    flex-wrap: wrap;             /* Makes it phone-friendly */
+    justify-content: center;
 }
 
 .project-link {
@@ -127,16 +129,15 @@ header p {
     box-shadow: 0 0 5px #1900ff;
     text-align: center;
     padding: 10px;
-    flex-shrink: 0;       /* Prevent shrinking */
+    flex-shrink: 0;
 }
 
 .project-link:hover {
-    background: #1877f2; /* Slight color change */
-    color: #fff;
+    background: #1877f2;
     transform: translateY(-5px);
 }
 
-/* Footer inside box */
+/* ------------------ FOOTER ------------------ */
 footer {
     margin-top: 30px;
     text-align: center;
@@ -144,4 +145,38 @@ footer {
     font-size: 0.9rem;
     border-top: 1px solid #ccc;
     padding-top: 15px;
+}
+
+/* ------------------ RESPONSIVE BREAKPOINTS ------------------ */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    header, .right-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .profile-photo img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 500px) {
+    .project-link {
+        width: 150px;
+        height: 100px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .contact-btn {
+        width: 100%;
+    }
 }
